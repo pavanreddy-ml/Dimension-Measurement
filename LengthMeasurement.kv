@@ -1,0 +1,306 @@
+<Boxes>:
+
+    canvas:
+        Color:
+            rgba: 47/255, 59/255, 82/255, 1
+
+        Rectangle:
+            pos: root.width * 0.003333333, root.height * 0.892
+            size: root.width * 0.7813333, root.height * 0.1
+
+        Rectangle:
+            pos: root.width * 0.003333333, root.height * 0.004
+            size: root.width * 0.7813333, root.height * 0.873
+
+        Rectangle:
+            pos: root.width * 0.794666666, root.height * 0.892
+            size: root.width * 0.19866666, root.height * 0.1
+
+        Rectangle:
+            pos: root.width * 0.794666666, root.height * 0.777
+            size: root.width * 0.19866666, root.height * 0.1
+
+        Rectangle:
+            pos: root.width * 0.794666666, root.height * 0.662
+            size: root.width * 0.19866666, root.height * 0.1
+
+        Rectangle:
+            pos: root.width * 0.794666666, root.height * 0.004
+            size: root.width * 0.19866666, root.height * 0.643
+
+
+
+    BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+
+		FloatLayout:
+
+		    GridLayout:
+		        cols: 4
+		        pos_hint: {'x': 0.804666666, 'y': 0.91}
+                size_hint: 0.18, 0.03
+                background_normal: ''
+
+                spacing:4
+
+
+                ToggleButton:
+                    id: A3
+                    text: 'A3'
+                    color: {'normal': (173/255, 191/255, 220/255, 1), 'down': (1, 1, 1, 1)} [self.state]
+                    group: 'Paper Size'
+                    canvas.before:
+                        Color:
+                            rgba: {'normal': (45/255, 158/255, 194/255, 1), 'down': (0, 0, 0, 1)} [self.state]
+                        Line:
+                            width: {'normal': 1.2, 'down': 0.6} [self.state]
+                            rectangle: self.x, self.y, self.width, self.height
+                    background_normal: ''
+                    background_color: {'normal': (27/255, 36/255, 52/255, 1), 'down': (227/255, 246/255, 240/255, 1)} [self.state]
+                    on_press: root.click(self)
+
+
+
+
+
+                ToggleButton:
+                    id: A4
+                    text: 'A4'
+                    color: {'normal': (173/255, 191/255, 220/255, 1), 'down': (1, 1, 1, 1)} [self.state]
+                    group: 'Paper Size'
+                    state: 'down'
+                    canvas.before:
+                        Color:
+                            rgba: {'normal': (45/255, 158/255, 194/255, 1), 'down': (0, 0, 0, 1)} [self.state]
+                        Line:
+                            width: {'normal': 1.2, 'down': 0.6} [self.state]
+                            rectangle: self.x, self.y, self.width, self.height
+                    background_normal: ''
+                    background_color: {'normal': (27/255, 36/255, 52/255, 1), 'down': (227/255, 246/255, 240/255, 1)} [self.state]
+                    on_press: root.click(self)
+
+
+                ToggleButton:
+                    id: A5
+                    text: 'A5'
+                    color: {'normal': (173/255, 191/255, 220/255, 1), 'down': (1, 1, 1, 1)} [self.state]
+                    group: 'Paper Size'
+                    canvas.before:
+                        Color:
+                            rgba: {'normal': (45/255, 158/255, 194/255, 1), 'down': (0, 0, 0, 1)} [self.state]
+                        Line:
+                            width: {'normal': 1.2, 'down': 0.6} [self.state]
+                            rectangle: self.x, self.y, self.width, self.height
+                    background_normal: ''
+                    background_color: {'normal': (27/255, 36/255, 52/255, 1), 'down': (227/255, 246/255, 240/255, 1)} [self.state]
+                    on_press: root.click(self)
+
+
+                ToggleButton:
+                    id: Custom
+                    text: 'Custom'
+                    color: {'normal': (173/255, 191/255, 220/255, 1), 'down': (1, 1, 1, 1)} [self.state]
+                    group: 'Paper Size'
+                    canvas.before:
+                        Color:
+                            rgba: {'normal': (45/255, 158/255, 194/255, 1), 'down': (0, 0, 0, 1)} [self.state]
+                        Line:
+                            width: {'normal': 1.2, 'down': 0.6} [self.state]
+                            rectangle: self.x, self.y, self.width, self.height
+                    background_normal: ''
+                    background_color: {'normal': (27/255, 36/255, 52/255, 1), 'down': (227/255, 246/255, 240/255, 1)} [self.state]
+                    on_press: root.click(self)
+
+
+
+            GridLayout:
+		        cols: 4
+		        pos_hint: {'x': 0.804666666, 'y': 0.795}
+                size_hint: 0.18, 0.03
+
+                spacing:4
+
+                ToggleButton:
+                    id: MM
+                    text: 'MM'
+                    color: {'normal': (173/255, 191/255, 220/255, 1), 'down': (1, 1, 1, 1)} [self.state]
+                    group: 'Unit'
+                    canvas.before:
+                        Color:
+                            rgba: {'normal': (45/255, 158/255, 194/255, 1), 'down': (0, 0, 0, 1)} [self.state]
+                        Line:
+                            width: {'normal': 1.2, 'down': 0.6} [self.state]
+                            rectangle: self.x, self.y, self.width, self.height
+                    background_normal: ''
+                    background_color: {'normal': (27/255, 36/255, 52/255, 1), 'down': (227/255, 246/255, 240/255, 1)} [self.state]
+                    on_press: root.click(self)
+
+                ToggleButton:
+                    id: CM
+                    text: 'CM'
+                    color: {'normal': (173/255, 191/255, 220/255, 1), 'down': (1, 1, 1, 1)} [self.state]
+                    group: 'Unit'
+                    state: 'down'
+                    canvas.before:
+                        Color:
+                            rgba: {'normal': (45/255, 158/255, 194/255, 1), 'down': (0, 0, 0, 1)} [self.state]
+                        Line:
+                            width: {'normal': 1.2, 'down': 0.6} [self.state]
+                            rectangle: self.x, self.y, self.width, self.height
+                    background_normal: ''
+                    background_color: {'normal': (27/255, 36/255, 52/255, 1), 'down': (227/255, 246/255, 240/255, 1)} [self.state]
+                    on_press: root.click(self)
+
+                ToggleButton:
+                    id: INCH
+                    text: 'INCH'
+                    color: {'normal': (173/255, 191/255, 220/255, 1), 'down': (1, 1, 1, 1)} [self.state]
+                    group: 'Unit'
+                    canvas.before:
+                        Color:
+                            rgba: {'normal': (45/255, 158/255, 194/255, 1), 'down': (0, 0, 0, 1)} [self.state]
+                        Line:
+                            width: {'normal': 1.2, 'down': 0.6} [self.state]
+                            rectangle: self.x, self.y, self.width, self.height
+                    background_normal: ''
+                    background_color: {'normal': (27/255, 36/255, 52/255, 1), 'down': (227/255, 246/255, 240/255, 1)} [self.state]
+                    on_press: root.click(self)
+
+                ToggleButton:
+                    id: FOOT
+                    text: 'FOOT'
+                    color: {'normal': (173/255, 191/255, 220/255, 1), 'down': (1, 1, 1, 1)} [self.state]
+                    group: 'Unit'
+                    canvas.before:
+                        Color:
+                            rgba: {'normal': (45/255, 158/255, 194/255, 1), 'down': (0, 0, 0, 1)} [self.state]
+                        Line:
+                            width: {'normal': 1.2, 'down': 0.6} [self.state]
+                            rectangle: self.x, self.y, self.width, self.height
+                    background_normal: ''
+                    background_color: {'normal': (27/255, 36/255, 52/255, 1), 'down': (227/255, 246/255, 240/255, 1)} [self.state]
+                    on_press: root.click(self)
+
+
+            GridLayout:
+		        cols: 5
+		        pos_hint: {'x': 0.804666666, 'y': 0.68}
+                size_hint: 0.18, 0.03
+
+                spacing:4
+
+                ToggleButton:
+                    id: Step1
+                    text: '1'
+                    color: {'normal': (173/255, 191/255, 220/255, 1), 'down': (1, 1, 1, 1)} [self.state]
+                    group: 'Steps'
+                    canvas.before:
+                        Color:
+                            rgba: {'normal': (45/255, 158/255, 194/255, 1), 'down': (0, 0, 0, 1)} [self.state]
+                        Line:
+                            width: {'normal': 1.2, 'down': 0.5} [self.state]
+                            rectangle: self.x, self.y, self.width, self.height
+                    background_normal: ''
+                    background_color: {'normal': (27/255, 36/255, 52/255, 1), 'down': (227/255, 246/255, 240/255, 1)} [self.state]
+                    on_press: root.click(self)
+
+                ToggleButton:
+                    id: Step2
+                    text: '2'
+                    color: {'normal': (173/255, 191/255, 220/255, 1), 'down': (1, 1, 1, 1)} [self.state]
+                    group: 'Steps'
+                    canvas.before:
+                        Color:
+                            rgba: {'normal': (45/255, 158/255, 194/255, 1), 'down': (0, 0, 0, 1)} [self.state]
+                        Line:
+                            width: {'normal': 1.2, 'down': 0.5} [self.state]
+                            rectangle: self.x, self.y, self.width, self.height
+                    background_normal: ''
+                    background_color: {'normal': (27/255, 36/255, 52/255, 1), 'down': (227/255, 246/255, 240/255, 1)} [self.state]
+                    on_press: root.click(self)
+
+                ToggleButton:
+                    id: Step3
+                    text: '3'
+                    color: {'normal': (173/255, 191/255, 220/255, 1), 'down': (1, 1, 1, 1)} [self.state]
+                    group: 'Steps'
+                    canvas.before:
+                        Color:
+                            rgba: {'normal': (45/255, 158/255, 194/255, 1), 'down': (0, 0, 0, 1)} [self.state]
+                        Line:
+                            width: {'normal': 1.2, 'down': 0.5} [self.state]
+                            rectangle: self.x, self.y, self.width, self.height
+                    background_normal: ''
+                    background_color: {'normal': (27/255, 36/255, 52/255, 1), 'down': (227/255, 246/255, 240/255, 1)} [self.state]
+                    on_press: root.click(self)
+
+                ToggleButton:
+                    id: Step4
+                    text: '4'
+                    color: {'normal': (173/255, 191/255, 220/255, 1), 'down': (1, 1, 1, 1)} [self.state]
+                    group: 'Steps'
+                    canvas.before:
+                        Color:
+                            rgba: {'normal': (45/255, 158/255, 194/255, 1), 'down': (0, 0, 0, 1)} [self.state]
+                        Line:
+                            width: {'normal': 1.2, 'down': 0.5} [self.state]
+                            rectangle: self.x, self.y, self.width, self.height
+                    background_normal: ''
+                    background_color: {'normal': (27/255, 36/255, 52/255, 1), 'down': (227/255, 246/255, 240/255, 1)} [self.state]
+                    on_press: root.click(self)
+
+                ToggleButton:
+                    id: Step5
+                    text: '5'
+                    color: {'normal': (173/255, 191/255, 220/255, 1), 'down': (1, 1, 1, 1)} [self.state]
+                    group: 'Steps'
+                    state: 'down'
+                    canvas.before:
+                        Color:
+                            rgba: {'normal': (45/255, 158/255, 194/255, 1), 'down': (0, 0, 0, 1)} [self.state]
+                        Line:
+                            width: {'normal': 1.2, 'down': 0.5} [self.state]
+                            rectangle: self.x, self.y, self.width, self.height
+                    background_normal: ''
+                    background_color: {'normal': (27/255, 36/255, 52/255, 1), 'down': (227/255, 246/255, 240/255, 1)} [self.state]
+                    on_press: root.click(self)
+
+
+
+    Label:
+        font_size: 70 * ((root.height/1500) + (root.width/1000)) / 2.5
+        center_x: root.width * 0.397333
+        center_y: root.height * 0.942
+        text: "OBJECT DIMENSION MEASUREMENT"
+        color: 173/255, 191/255, 220/255, 1
+
+
+    Label:
+        font_size: 30  * ((root.height/1500) + (root.width/1000)) / 2.5
+        x: root.width * 0.835
+        y: root.height * 0.69
+        text: "PROCESS STEPS"
+        color: 173/255, 191/255, 220/255, 1
+
+
+    Label:
+        font_size: 30  * ((root.height/1500) + (root.width/1000)) / 2.5
+        x: root.width * 0.82
+        y: root.height * 0.915
+        text: "PAPER SIZE"
+        color: 173/255, 191/255, 220/255, 1
+
+    Label:
+        font_size: 30  * ((root.height/1500) + (root.width/1000)) / 2.5
+        x: root.width * 0.79
+        y: root.height * 0.805
+        text: "UNIT"
+        color: 173/255, 191/255, 220/255, 1
+
+    Label:
+        font_size: 40  * ((root.height/1500) + (root.width/1000)) / 2.5
+        x: root.width * 0.84
+        y: root.height * 0.57
+        text: "DESCRIPTION"
+        color: 173/255, 191/255, 220/255, 1
